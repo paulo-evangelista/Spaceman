@@ -126,6 +126,8 @@ struct PreferencesView: View {
             refreshShortcutRecorder
             quickRenameShortcutRecorder
             preferencesShortcutRecorder
+            moveWindowToPreviousSpaceShortcutRecorder
+            moveWindowToNextSpaceShortcutRecorder
         }
         .padding()
     }
@@ -547,6 +549,23 @@ struct PreferencesView: View {
             Text("Shortcut to rename current space")
             Spacer()
             KeyboardShortcuts.Recorder(for: .quickRename)
+        }
+    }
+
+    // MARK: - Move Window Shortcut Recorders
+    private var moveWindowToPreviousSpaceShortcutRecorder: some View {
+        HStack {
+            Text("Shortcut to move window to previous space")
+            Spacer()
+            KeyboardShortcuts.Recorder(for: .moveWindowToPreviousSpace)
+        }
+    }
+
+    private var moveWindowToNextSpaceShortcutRecorder: some View {
+        HStack {
+            Text("Shortcut to move window to next space")
+            Spacer()
+            KeyboardShortcuts.Recorder(for: .moveWindowToNextSpace)
         }
     }
 

@@ -18,4 +18,10 @@ extension KeyboardShortcuts.Name {
     static let quickRename = Self(
         "quickRename",
         default: .init(.n, modifiers: [.control, .option, .command]))
+    static let moveWindowToPreviousSpace = Self(
+        "moveWindowToPreviousSpace",
+        default: .init(.leftArrow, modifiers: [.control, .option, .command]))
+    static let moveWindowToNextSpace = Self(
+        "moveWindowToNextSpace",
+        default: .init(.rightArrow, modifiers: [.control, .option, .command]))
 }

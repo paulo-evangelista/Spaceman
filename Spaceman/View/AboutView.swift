@@ -16,10 +16,11 @@ struct AboutView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 60, height: 60)
+                    .clipShape(RoundedRectangle(cornerRadius: 13, style: .continuous))
             }
             VStack(alignment: .leading) {
                 Text("Spaceman").font(.title).fontWeight(.bold)
-                Text("Version \(Constants.AppInfo.appVersion ?? "?")")
+                Text(verbatim: "Version paulera")
                     .foregroundColor(.secondary)
             }
             Spacer()

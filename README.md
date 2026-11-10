@@ -39,6 +39,9 @@ When launching Spaceman, you may run into this message. Open the System Settings
 
 <img src="images/NoOpenAuth.png" width="66%" height="auto">
 
+Local Xcode builds use ad-hoc signing (Xcode’s “Sign to Run Locally”) and do not require an Apple Developer
+certificate or team. Ad-hoc builds are intended for personal use and are not notarized.
+
 ## 🔹 What It Looks Like
 
 You can choose between Filled or Bordered view:
@@ -111,6 +114,7 @@ Spaceman's preferences are organized into six tabs: **General**, **Appearance**,
 - **Shortcut for manual refresh**: Defines a shortcut key to tell Spaceman to update the space information
 - **Shortcut to rename current space**: Defines a shortcut key to quickly rename the current space without opening Preferences
 - **Shortcut to open preferences window**: Defines a shortcut key to open the preferences window. The preferences window can be closed with ⌘W
+- **Shortcut to move window to previous/next space**: Moves the focused window one space and follows it. Both shortcuts are customizable
 
 - **Display spaces in menu as**: Choose between a list or a grid layout for the right-click menu
 - **Nr. of columns in grid**: When using grid layout, this sets the number of columns
@@ -213,7 +217,7 @@ For space switching to work, you need to configure two things:
 - Go to **System Settings → Keyboard → Keyboard Shortcuts → Mission Control**
 - Assign and enable shortcuts for the following, if you want to use them:
   - "Switch to Desktop" for any spaces you want to be able to switch to
-  - "Move left/right a space" for navigation buttons
+  - "Move left/right a space" for navigation buttons and moving the focused window between spaces
 
 <img src="images/Shortcuts.png" width="66%" height="auto">
 
@@ -252,6 +256,12 @@ Some appearance settings are also available directly from this menu.
 
 <img src="images/Quick-Rename-3.png" width="auto" height="auto">
 
+**Move the Focused Window**
+- Use the configurable previous/next shortcuts in Preferences → General to move the focused window one space
+- Spaceman follows the moved window to the destination space
+- The macOS Mission Control "Move left/right a space" shortcuts and Accessibility access must be enabled
+- Full-screen windows and the edge spaces cannot be moved farther in that direction
+
 **Resizing the Icon**
 - Hold **⌥ Option** and scroll on the menu bar icon to quickly change the icon size
 
@@ -263,6 +273,8 @@ Some appearance settings are also available directly from this menu.
 ### Limitations
 
 - Space switching will fail without proper Accessibility permissions
+- Moving a window between spaces uses macOS’s native drag-and-switch behavior and requires the Mission Control
+  "Move left/right a space" shortcuts
 
 ## 🔹 Remote Control
 
@@ -335,5 +347,4 @@ Spaceman is not compatible with the setting **System Settings → Desktop & Dock
 
 - [SpaceId](https://github.com/dshnkao/SpaceId/)
   - [SpaceId fork](https://github.com/davidpurnell/SpaceId)
-
 
